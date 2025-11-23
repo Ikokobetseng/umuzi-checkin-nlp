@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Umuzi_XB1_Checkin_Report</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#umuzi-xb1-checkin-feedback-nlp-analysis"
+id="toc-umuzi-xb1-checkin-feedback-nlp-analysis">Umuzi XB1 Check‑in
+Feedback – NLP Analysis</a>
+<ul>
+<li><a href="#executive-summary" id="toc-executive-summary">1. Executive
+summary</a></li>
+<li><a href="#sentiment-overview" id="toc-sentiment-overview">2.
+Sentiment overview</a></li>
+<li><a href="#top5-themes" id="toc-top5-themes">3. Top‑5 themes</a></li>
+<li><a href="#wordcloud-visualisations"
+id="toc-wordcloud-visualisations">4. Word‑cloud visualisations</a>
+<ul>
+<li><a href="#wins" id="toc-wins">Wins</a></li>
+<li><a href="#losses" id="toc-losses">Losses</a></li>
+<li><a href="#blockers" id="toc-blockers">Blockers</a></li>
+</ul></li>
+<li><a href="#sentiment-distribution" id="toc-sentiment-distribution">5.
+Sentiment distribution</a></li>
+<li><a href="#recommendations" id="toc-recommendations">6.
+Recommendations</a></li>
+<li><a href="#next-steps" id="toc-next-steps">7. Next steps</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="umuzi-xb1-checkin-feedback-nlp-analysis">Umuzi XB1 Check‑in
+Feedback – NLP Analysis</h1>
+<h2 id="executive-summary">1. Executive summary</h2>
+<p>The analysis of the latest check‑in feedback shows an overall
+positive sentiment for “Wins” (average 0.42), a neutral‑to‑slightly
+negative tone for “Losses” (‑0.12), and a more negative perception for
+“Blockers” (‑0.35). The dominant themes reveal that team members are
+proud of delivering features quickly, frustrated by recurring
+integration bugs, and blocked by limited access to test
+environments.</p>
+<h2 id="sentiment-overview">2. Sentiment overview</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Avg. sentiment</th>
+<th># entries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wins</td>
+<td>0.42</td>
+<td>38</td>
+</tr>
+<tr>
+<td>Losses</td>
+<td>-0.12</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Blockers</td>
+<td>-0.35</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<h2 id="top5-themes">3. Top‑5 themes</h2>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 20%" />
+<col style="width: 15%" />
+<col style="width: 20%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>Category</th>
+<th>Theme 1</th>
+<th>Theme 2</th>
+<th>Theme 3</th>
+<th>Theme 4</th>
+<th>Theme 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wins</td>
+<td>fast delivery</td>
+<td>teamwork</td>
+<td>code quality</td>
+<td>customer feedback</td>
+<td>sprint velocity</td>
+</tr>
+<tr>
+<td>Losses</td>
+<td>bugs</td>
+<td>slow review</td>
+<td>merge conflicts</td>
+<td>tech debt</td>
+<td>unclear specs</td>
+</tr>
+<tr>
+<td>Blockers</td>
+<td>test env</td>
+<td>API access</td>
+<td>dependency</td>
+<td>time zone diff</td>
+<td>licensing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wordcloud-visualisations">4. Word‑cloud visualisations</h2>
+<h3 id="wins">Wins</h3>
+<figure>
+<img src="wins_wordcloud.png" alt="Wins – Word Cloud" />
+<figcaption aria-hidden="true">Wins – Word Cloud</figcaption>
+</figure>
+<h3 id="losses">Losses</h3>
+<figure>
+<img src="losses_wordcloud.png" alt="Losses – Word Cloud" />
+<figcaption aria-hidden="true">Losses – Word Cloud</figcaption>
+</figure>
+<h3 id="blockers">Blockers</h3>
+<figure>
+<img src="blockers_wordcloud.png" alt="Blockers – Word Cloud" />
+<figcaption aria-hidden="true">Blockers – Word Cloud</figcaption>
+</figure>
+<h2 id="sentiment-distribution">5. Sentiment distribution</h2>
+<figure>
+<img src="sentiment_histogram.png" alt="Sentiment histogram" />
+<figcaption aria-hidden="true">Sentiment histogram</figcaption>
+</figure>
+<h2 id="recommendations">6. Recommendations</h2>
+<ul>
+<li><strong>Address recurring bugs</strong> by allocating a “bug‑fix”
+sprint every month.<br />
+</li>
+<li><strong>Improve test environment access</strong> through automated
+provisioning to reduce blocker #1.<br />
+</li>
+<li><strong>Clarify specifications</strong> early in the sprint to cut
+down on unclear‑spec losses.</li>
+</ul>
+<h2 id="next-steps">7. Next steps</h2>
+<ol type="1">
+<li>Review the top themes and prioritize the most frequent
+blockers.<br />
+</li>
+<li>Schedule a follow‑up meeting to discuss the recommendations.<br />
+</li>
+<li>Update the notebook with any new data and re‑run the analysis for
+the next check‑in.</li>
+</ol>
+</body>
+</html>
